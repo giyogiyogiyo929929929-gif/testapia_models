@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.civ.airship.propeller_spin": {
+      "loop": true,
+      "animation_length": 0.5,
+      "bones": {
+        "prop1": { "rotation": [0, 0, "query.anim_time * -720"] },
+        "prop2": { "rotation": [0, 0, "query.anim_time * 720"] },
+        "prop3": { "rotation": [0, 0, "query.anim_time * 720"] },
+        "prop4": { "rotation": [0, 0, "query.anim_time * -720"] }
+      }
+    },
+    "animation.civ.airship.idle": {
+      "loop": true,
+      "animation_length": 12,
+      "bones": {
+        "root": {
+          "position": [
+            "math.sin(query.anim_time * 60 + 40) * 0.9",
+            "math.sin(query.anim_time * 30) * 1.6",
+            0
+          ],
+          "rotation": [
+            "math.sin(query.anim_time * 60) * 1.0",
+            "math.sin(query.anim_time * 30 + 200) * 1.5",
+            "math.sin(query.anim_time * 30 + 90) * 2.0"
+          ]
+        },
+        "rudder": { "rotation": [0, "math.sin(query.anim_time * 90) * 6", 0] },
+        "elev_l": { "rotation": ["math.sin(query.anim_time * 60 + 120) * 4", 0, 0] },
+        "elev_r": { "rotation": ["math.sin(query.anim_time * 60 + 120) * 4", 0, 0] },
+        "flag": {
+          "rotation": [
+            0,
+            "math.sin(query.anim_time * 360) * 10",
+            "math.sin(query.anim_time * 300 + 60) * 5"
+          ]
+        }
+      }
+    }
+  }
+}

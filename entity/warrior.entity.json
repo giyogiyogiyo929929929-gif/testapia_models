@@ -1,0 +1,16 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:warrior",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/warrior" },
+      "geometry": { "default": "geometry.civ.warrior" },
+      "animations": {
+        "idle": "animation.civ.warrior.idle"
+      },
+      "scripts": { "animate": ["idle"] },
+      "render_controllers": ["controller.render.civ.warrior"]
+    }
+  }
+}

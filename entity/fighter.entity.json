@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:fighter",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/fighter"
+      },
+      "geometry": {
+        "default": "geometry.civ.fighter"
+      },
+      "render_controllers": [
+        "controller.render.civ.fighter"
+      ],
+      "animations": {
+        "idle": "animation.civ.fighter.idle",
+        "afterburner": "animation.civ.fighter.afterburner"
+      },
+      "scripts": {
+        "animate": [
+          "idle",
+          "afterburner"
+        ]
+      }
+    }
+  }
+}

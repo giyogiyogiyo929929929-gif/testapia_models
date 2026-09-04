@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Civ Tactics - Unit Models",
+    "description": "testapia(Civ Tactics)の戦闘ユニットの3Dモデルを表示するための補助リソースパック。",
+    "uuid": "c98e627e-e815-4940-a987-5fb4e686915f",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "199f4aa9-0906-44d0-85a9-8e1d864d3db2",
+      "version": [1, 0, 0]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:airship",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/airship" },
+      "geometry": { "default": "geometry.civ.airship" },
+      "animations": { "propeller_spin": "animation.civ.airship.propeller_spin" },
+      "scripts": { "animate": ["propeller_spin"] },
+      "render_controllers": ["controller.render.civ.airship"]
+    }
+  }
+}

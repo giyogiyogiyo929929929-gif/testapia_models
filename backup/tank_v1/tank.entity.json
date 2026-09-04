@@ -1,0 +1,12 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:tank",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/tank" },
+      "geometry": { "default": "geometry.civ.tank" },
+      "render_controllers": ["controller.render.civ.tank"]
+    }
+  }
+}

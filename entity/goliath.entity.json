@@ -1,0 +1,32 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:goliath",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/goliath"
+      },
+      "geometry": {
+        "default": "geometry.civ.goliath"
+      },
+      "render_controllers": [
+        "controller.render.civ.goliath"
+      ],
+      "animations": {
+        "propeller_spin": "animation.civ.goliath.propeller_spin",
+        "cruise": "animation.civ.goliath.cruise",
+        "watch": "animation.civ.goliath.watch"
+      },
+      "scripts": {
+        "animate": [
+          "propeller_spin",
+          "cruise",
+          "watch"
+        ]
+      }
+    }
+  }
+}

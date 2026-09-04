@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.civ.dreadnought.swell": {
+      "loop": true,
+      "animation_length": 12,
+      "bones": {
+        "root": {
+          "position": [0, "math.sin(query.anim_time * 30) * 0.55", 0],
+          "rotation": [
+            "math.sin(query.anim_time * 30 + 40) * 0.9",
+            0,
+            "math.sin(query.anim_time * 20) * 2.6"
+          ]
+        }
+      }
+    },
+    "animation.civ.dreadnought.watch": {
+      "loop": true,
+      "animation_length": 40,
+      "bones": {
+        "director": { "rotation": [0, "math.sin(query.anim_time * 9) * 55", 0] },
+        "turret_a": { "rotation": [0, "math.sin(query.anim_time * 9 - 25) * 22", 0] },
+        "turret_b": { "rotation": [0, "math.sin(query.anim_time * 9 - 40) * 18", 0] },
+        "turret_x": { "rotation": [0, "math.sin(query.anim_time * 9 - 55) * 18", 0] },
+        "turret_y": { "rotation": [0, "math.sin(query.anim_time * 9 - 70) * 22", 0] }
+      }
+    }
+  }
+}

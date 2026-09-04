@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:dreadnought",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/dreadnought"
+      },
+      "geometry": {
+        "default": "geometry.civ.dreadnought"
+      },
+      "render_controllers": [
+        "controller.render.civ.dreadnought"
+      ],
+      "animations": {
+        "swell": "animation.civ.dreadnought.swell",
+        "watch": "animation.civ.dreadnought.watch"
+      },
+      "scripts": {
+        "animate": [
+          "swell",
+          "watch"
+        ]
+      }
+    }
+  }
+}

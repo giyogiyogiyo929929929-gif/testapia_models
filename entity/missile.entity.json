@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:missile",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/missile"
+      },
+      "geometry": {
+        "default": "geometry.civ.missile"
+      },
+      "render_controllers": [
+        "controller.render.civ.missile"
+      ],
+      "animations": {
+        "flight": "animation.civ.missile.flight",
+        "burn": "animation.civ.missile.burn"
+      },
+      "scripts": {
+        "animate": [
+          "flight",
+          "burn"
+        ]
+      }
+    }
+  }
+}

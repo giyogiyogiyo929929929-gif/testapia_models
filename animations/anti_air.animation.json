@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.civ.anti_air.scan": {
+      "loop": true,
+      "animation_length": 24,
+      "bones": {
+        "mount": { "rotation": [0, "math.sin(query.anim_time * 15) * 55", 0] },
+        "cradle": { "rotation": ["math.sin(query.anim_time * 15 + 50) * 10", 0, 0] }
+      }
+    },
+    "animation.civ.anti_air.radar_spin": {
+      "loop": true,
+      "animation_length": 6,
+      "bones": {
+        "radar": { "rotation": [0, "query.anim_time * 60", 0] }
+      }
+    }
+  }
+}

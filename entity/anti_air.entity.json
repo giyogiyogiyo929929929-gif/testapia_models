@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:anti_air",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/anti_air"
+      },
+      "geometry": {
+        "default": "geometry.civ.anti_air"
+      },
+      "render_controllers": [
+        "controller.render.civ.anti_air"
+      ],
+      "animations": {
+        "scan": "animation.civ.anti_air.scan",
+        "radar_spin": "animation.civ.anti_air.radar_spin"
+      },
+      "scripts": {
+        "animate": [
+          "scan",
+          "radar_spin"
+        ]
+      }
+    }
+  }
+}

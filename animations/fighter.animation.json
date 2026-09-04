@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.civ.fighter.idle": {
+      "loop": true,
+      "animation_length": 8,
+      "bones": {
+        "root": {
+          "position": [0, "math.sin(query.anim_time * 90) * 0.8", 0],
+          "rotation": [
+            "math.sin(query.anim_time * 90 + 30) * 1.2",
+            "math.sin(query.anim_time * 45 + 120) * 1.0",
+            "math.sin(query.anim_time * 45) * 4.0"
+          ]
+        },
+        "stab_r": { "rotation": ["math.sin(query.anim_time * 90 + 30) * -3", 0, 0] },
+        "stab_l": { "rotation": ["math.sin(query.anim_time * 90 + 30) * -3", 0, 0] },
+        "fin_r": { "rotation": [0, "math.sin(query.anim_time * 60) * 4", 0] },
+        "fin_l": { "rotation": [0, "math.sin(query.anim_time * 60) * 4", 0] }
+      }
+    },
+    "animation.civ.fighter.afterburner": {
+      "loop": true,
+      "animation_length": 0.4,
+      "bones": {
+        "flame": {
+          "scale": [
+            "1 + math.sin(query.anim_time * 1800) * 0.12",
+            "1 + math.sin(query.anim_time * 1800 + 90) * 0.12",
+            "1 + math.sin(query.anim_time * 1440 + 60) * 0.35"
+          ]
+        }
+      }
+    }
+  }
+}
