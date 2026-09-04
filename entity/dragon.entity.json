@@ -1,0 +1,17 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:dragon",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/dragon" },
+      "geometry": { "default": "geometry.civ.dragon" },
+      "animations": {
+        "idle": "animation.civ.dragon.idle",
+        "wings": "animation.civ.dragon.wings"
+      },
+      "scripts": { "animate": ["idle", "wings"] },
+      "render_controllers": ["controller.render.civ.dragon"]
+    }
+  }
+}

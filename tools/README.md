@@ -16,6 +16,7 @@ Minecraft を起動せずにモデルを作る/確認するための Node スク
 | `gen_cannon.js` | `models/entity/cannon.geo.json` と `textures/entity/cannon.png` を生成する。**大砲の形状・塗りのソースはこのファイル**。 |
 | `gen_artillery.js` | `models/entity/artillery.geo.json` と `textures/entity/artillery.png` を生成する。**近代砲兵の形状・塗りのソースはこのファイル**。 |
 | `gen_machine_gunner.js` | `models/entity/machine_gunner.geo.json` と `textures/entity/machine_gunner.png` を生成する。**機関銃兵の形状・塗りのソースはこのファイル**。 |
+| `gen_dragon.js` | `models/entity/dragon.geo.json` と `textures/entity/dragon.png` を生成する。**ドラゴンの形状・塗りのソースはこのファイル**。ゲーム側のユニットではなく、単体で置いて眺めるためのモデル。 |
 | `preview_model.js` | 生成物をオフラインでレンダリングして `tools/preview/<名前>_*.png`(側面/斜め/上面/正面)に出す。形と塗りの当たり確認用。 |
 | `preview_airship.js` | 上を airship 指定で呼ぶだけの薄いラッパー(従来のコマンドを残してあるだけ)。 |
 
@@ -42,6 +43,8 @@ node tools/gen_artillery.js
 node tools/preview_model.js artillery
 node tools/gen_machine_gunner.js
 node tools/preview_model.js machine_gunner
+node tools/gen_dragon.js
+node tools/preview_model.js dragon
 ```
 
 ## 触るときの注意
@@ -106,6 +109,21 @@ node tools/preview_model.js machine_gunner
     💡 防盾は中央 |x|<6 を空けた左右2枚。ここを塞ぐと仰角を付けたとき駐退機が突き抜ける。
       開脚した脚は**ボーンの回転ではなくキューブの階段**で作ってある(プレビューが
       ボーン回転を無視するため)。`stow`(弾薬)は旋回しないよう `carriage` の子。
+  - dragon: `root` / `body` / `neck` / `head` / `jaw` / `wing_r` / `wing_l` / `wingtip_r` /
+    `wingtip_l` / `tail1` / `tail2` / `tail3` / `leg_fr` / `leg_fl` / `leg_hr` / `leg_hl`
+    → `animations/dragon.animation.json`。`idle`(呼吸・首振り・顎の開閉・尾のうねり)と
+      `wings`(翼の羽ばたき)の2本を同時に流している。翼は肩 (x=±17, y=62, z=-16) まわりに
+      **Z 軸**で羽ばたかせるので、`wing_r` / `wing_l` の pivot をここから動かすと翼が胴から抜ける。
+      `tail1`〜`tail3` は後ろへ行くほど振幅を上げて位相を遅らせている。
+    💡 **ゲーム側のユニットではない**。`scripts/` からは参照されておらず、リソースパックと
+      `entities/dragon.entity.json`(振る舞いパック)だけで完結している。見るには
+      `/summon civ:dragon` する。ユニットとして使うなら `scripts/unitModels.js` と
+      `production.js` への登録が別途要る。
+    💡 y=0 が接地面の四つ足姿勢。首と尾と翼のしなりは**ボーン回転ではなくキューブの階段**で
+      作ってある(`preview_model.js` がボーン回転を無視するため)。静止ポーズを変えるときは
+      `gen_dragon.js` のキューブ座標側を直すこと。有機的な形なので、胴に生える部品は
+      「親より外へ 1 以上はみ出す」か「完全に内側へ埋める」かのどちらかを守らないと
+      側面どうしが同一平面になって z-fighting する(冒頭の注記を読むこと)。
   - machine_gunner: `root` / `body` / `head` / `arm_r` / `arm_l` / `gun` / `belt` / `can` /
     `leg_r` / `leg_l`
     → `animations/machine_gunner.animation.json`。動かしているのは `head`(見回し)と
