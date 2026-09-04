@@ -1,0 +1,16 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:machine_gunner",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/machine_gunner" },
+      "geometry": { "default": "geometry.civ.machine_gunner" },
+      "animations": {
+        "idle": "animation.civ.machine_gunner.idle"
+      },
+      "scripts": { "animate": ["idle"] },
+      "render_controllers": ["controller.render.civ.machine_gunner"]
+    }
+  }
+}

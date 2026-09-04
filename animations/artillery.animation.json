@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.civ.artillery.lay": {
+      "loop": true,
+      "animation_length": 22,
+      "bones": {
+        "mount": {
+          "rotation": [0, "math.sin(query.anim_time * 16) * 11", 0]
+        },
+        "cradle": {
+          "rotation": ["math.sin(query.anim_time * 11 + 60) * 5", 0, 0]
+        }
+      }
+    }
+  }
+}

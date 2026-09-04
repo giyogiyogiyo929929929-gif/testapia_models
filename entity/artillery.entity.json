@@ -1,0 +1,16 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "civ:artillery",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/artillery" },
+      "geometry": { "default": "geometry.civ.artillery" },
+      "animations": {
+        "lay": "animation.civ.artillery.lay"
+      },
+      "scripts": { "animate": ["lay"] },
+      "render_controllers": ["controller.render.civ.artillery"]
+    }
+  }
+}
